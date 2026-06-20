@@ -1,0 +1,51 @@
+systemName: 복지AX-BE
+basePackage: com.beplepay.welfareaxbe
+
+db:
+  vendor: postgresql
+  schemaPrefix: ""
+
+review:
+  defaultLanguage: ko
+  maxFiles: 50
+  maxLines: 5000
+
+git:
+  protectedBranches:
+    - main
+    - develop
+    - release-*
+    - internal-*
+
+# 버전관리 — 현재 GitHub 사용, 추후 GitLab으로 전환 예정
+vcs:
+  current: github
+  github:
+    baseUrl: https://github.com
+  gitlab:
+    baseUrl: ""           # GitLab 전환 시 설정
+    projectMappings: {}
+
+notification:
+  enabled: false
+  type: ""
+
+# 환경 구성 (local → dev → stg)
+environments:
+  local:
+    description: 로컬 개발 (GitHub + 로컬 DB)
+    vcs: github
+  dev:
+    description: 개발 서버 (GitLab + 실제 개발 DB) — 추후 구성
+    vcs: gitlab
+  stg:
+    description: 스테이징 (GitLab + 운영 DB) — 추후 구성
+    vcs: gitlab
+
+features:
+  scope:
+    enabled: true
+  mrComment:
+    enabled: false    # GitLab 전환 후 true로 변경
+  flowNotification:
+    enabled: false

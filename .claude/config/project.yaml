@@ -1,0 +1,23 @@
+workspaceName: welfare-ax-be
+outputDir: target
+basePackagePattern: com.beplepay.welfareaxbe
+commonUtilsArtifact: ""
+tracing:
+  mdcKey: traceId
+
+db:
+  vendor: postgresql
+
+projects:
+  - name: welfare-ax-be
+    shortName: ax
+    description: 복지AX 백엔드 (경조사지원 API — 신청·승인·지급·정산)
+    dir: .
+    buildTool: gradle
+    guideline: guide-springboot-web
+    conditionalGuides:
+      - condition: jpa
+        guide: guide-jpa
+      - condition: batch
+        guide: guide-batch
+    outputDir: target

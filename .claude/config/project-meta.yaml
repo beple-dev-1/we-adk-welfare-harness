@@ -1,0 +1,80 @@
+# 복지AX-BE 도메인 키워드 사전
+# code-investigator, security-auditor 에이전트가 선탐색 시 참조
+
+keywordExpansion:
+  경조사:
+    - ceremony
+    - life_event
+    - condolence
+    - congratulation
+  신청:
+    - application
+    - request
+    - register
+  승인:
+    - approval
+    - approve
+    - confirm
+  지급:
+    - payment
+    - disburse
+    - grant
+    - pay
+  정산:
+    - settlement
+    - reconcile
+    - batch
+    - aggregate
+  회원:
+    - member
+    - user
+    - beneficiary
+    - employee
+  가맹점:
+    - merchant
+    - vendor
+    - store
+  기업고객:
+    - corporate
+    - company
+    - employer
+    - client
+  잔액:
+    - balance
+    - point
+    - remaining
+    - quota
+
+koreanMap:
+  경조사: ceremony
+  신청: application
+  승인: approval
+  지급: payment
+  정산: settlement
+  회원: member
+  가맹점: merchant
+  잔액: balance
+  기업: corporate
+  한도: limit
+  만료: expire
+  취소: cancel
+  결혼: wedding
+  출산: birth
+  장례: funeral
+
+securityKeywords:
+  - encrypt
+  - decrypt
+  - password
+  - secret
+  - token
+  - jwt
+  - session
+  - auth
+  - PII
+  - 개인정보
+  - 암호화
+  - 복호화
+  - 인증
+  - Authorization
+  - X-Api-Key
