@@ -33,6 +33,10 @@
 - `scope.yaml` — 6개 스코프 모두 모듈별 경로로 업데이트
 - `system.yaml` — stg → prod 환경 변경
 
+## Git 커밋 현황
+- `welfare-ax-be` (소스): `a8e6f63` — refactor: 단일 모듈 → 5개 멀티모듈 구조로 전환 (origin/main 동기화 완료)
+- `welfare-ax-be-harness` (하네스): `ced3663` — refactor: 멀티모듈 구조 전환 및 환경 설정 변경 반영 (origin/main 동기화 완료)
+
 ## 다음 단계
 1. `/dev-interview`로 첫 번째 기능 개발 시작 (경조사 신청 API)
 2. 첫 Entity 추가 시 `welfare-ax-domain` 엔티티가 `welfare-ax-user`에서 자동 스캔되는지 확인 필요
