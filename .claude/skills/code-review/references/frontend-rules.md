@@ -9,7 +9,7 @@
 
 | 프로젝트 | JS 패턴 | AJAX 방식 | UI 컴포넌트 |
 |---------|---------|----------|-----------|
-| we-adk-welfare-user | IIFE 모듈 패턴 | `$.ajax()` + ApiResponse | 추후 확정 (현재 네이티브 alert/confirm) |
+| we-adk-welfare-user | IIFE 모듈 패턴 | `$.ajax()` + ApiResponse | Bootstrap 5.x (`bootstrap.Modal` / `bootstrap.Toast`) |
 
 **핵심 원칙:** 신규 코드는 IIFE 모듈 패턴을 따른다. IIFE 없이 전역 변수·함수를 직접 선언하지 않는다.
 
