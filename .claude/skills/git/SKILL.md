@@ -2,6 +2,26 @@
 
 복지AX 프로젝트의 git 작업을 안전하게 처리한다.
 
+## 레포 라우팅 — system.yaml 기준
+
+git 작업 요청 시 탐색 없이 아래 표를 즉시 참조한다.
+현재 VCS 값은 `.claude/config/system.yaml`의 `vcs.current` / `harness.current`에서 읽는다.
+
+| 변경 파일 유형 | 레포 | 로컬 경로 | Remote (`system.yaml` 키) |
+|--------------|------|----------|--------------------------|
+| `.claude/**`, `CLAUDE.md` | 하네스 레포 | `../we-adk-welfare-harness` | `harness.{current}.remote` |
+| `src/`, `*.gradle.kts`, `*.java`, `*.properties` 등 소스 파일 | 소스 레포 | `.` (프로젝트 루트) | `vcs.{current}.remote` |
+
+**현재 값 (github):**
+- 소스 레포 remote: `https://github.com/beple-dev-1/we-adk-welfare.git`
+- 하네스 레포 remote: `https://github.com/beple-dev-1/we-adk-welfare-harness.git`
+
+**GitLab 전환 시 할 일 — `SKILL.md` 수정 불필요, `system.yaml`만 수정:**
+1. `vcs.current` → `gitlab`
+2. `vcs.gitlab.baseUrl` / `vcs.gitlab.remote` → GitLab 소스 레포 URL 입력
+3. `harness.current` → `gitlab`
+4. `harness.gitlab.remote` → GitLab 하네스 레포 URL 입력
+
 ## 사용법
 ```
 /git {subcmd} [{대상}]
