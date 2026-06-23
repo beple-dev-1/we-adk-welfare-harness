@@ -294,7 +294,7 @@ toast.show();
     const _csrfHeader_  = /*[[${_csrf.headerName}]]*/ "X-CSRF-TOKEN";
     /*]]>*/
 </script>
-<script th:src="@{/static/js/ceremony/ceremony-apply.js}"></script>
+<script th:src="@{/js/ceremony/ceremony-apply.js}"></script>
 ```
 
 ### 10-2. 전역 변수 명명
